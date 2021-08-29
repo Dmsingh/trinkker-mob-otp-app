@@ -105,6 +105,7 @@ export default function SignIn() {
         // ...
       })
       .catch((error) => {
+        console.log(error)
         alert("SMS not sent");
         setOpen(false);
         window.location.reload();
