@@ -80,7 +80,7 @@ export default function Home() {
 
       setcount(count + 1);
     } else {
-      alert("user name, you have rated all the images. Thank You!");
+      alert(`${username}, you have rated all the images. Thank You!`);
     }
   };
   const right = () => {
@@ -91,7 +91,7 @@ export default function Home() {
 
       setcount(count + 1);
     } else {
-      alert("user name, you have rated all the images. Thank You!");
+      alert(`${username}, you have rated all the images. Thank You!`);
     }
   };
   const logout = () => {
