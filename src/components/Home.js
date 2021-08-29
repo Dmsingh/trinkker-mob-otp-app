@@ -13,17 +13,22 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import data from "./data";
 import firebase from "../firebase";
+import { CardMedia } from "@material-ui/core";
 
-const useStyles = makeStyles({
+const useStyles =  makeStyles({
   root: {
     Width: "100vh",
-    height: "400px",
+    height: "auto",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
+   
   },
   media: {
-    height: 140,
+    height: 150,
+    width:150,
+    marginLeft:'40%',
+  
   },
   left: {
     width: "200px",
@@ -37,7 +42,7 @@ const useStyles = makeStyles({
     marginTop: 150,
   },
   actionArea: {
-    backgroundColor: "#9e8282de",
+    backgroundColor: "#FFFFF",
   },
 });
 
@@ -124,16 +129,18 @@ export default function Home() {
           }
         </div>
         <CardActionArea className={classes.actionArea}>
-          <img src={data[count].src} alt={data[count].name} />
+        <CardMedia
+          className={classes.media}
+          image={data[count].src}
+          title={data[count].name}
+        />
+          
 
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               {data[count].name}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Cross-Origin Read Blocking (CORB) blocked cross-origin response
-              http://getdrawings.com/get-icon with MIME type text/html.
-            </Typography>
+         
           </CardContent>
         </CardActionArea>
         <div className={classes.right}>
